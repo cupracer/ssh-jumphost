@@ -1,4 +1,4 @@
-FROM opensuse/leap:15.0
+FROM opensuse/leap:15.1
 LABEL maintainer="Thomas Schulte <thomas@cupracer.de>"
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D", "-e"]
