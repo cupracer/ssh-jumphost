@@ -8,6 +8,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: cupracer/ssh-jumphost
+        registry: docker.pkg.github.com
+        name: docker.pkg.github.com/cupracer/ssh-jumphost/ssh-jumphost
         username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        password: ${{ secrets.DOCKER_PKG_GITHUB_TOKEN }}
