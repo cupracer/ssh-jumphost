@@ -1,4 +1,4 @@
-FROM opensuse/tumbleweed:latest
+FROM opensuse/leap:latest
 LABEL maintainer="Thomas Schulte <thomas@cupracer.de>"
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D", "-e"]
@@ -17,4 +17,3 @@ RUN /usr/sbin/useradd -m -k /var/lib/empty user \
 	&& chmod 0600 /home/user/.ssh
 
 RUN /usr/sbin/sshd-gen-keys-start
-
