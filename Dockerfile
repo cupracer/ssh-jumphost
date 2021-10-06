@@ -12,6 +12,7 @@ RUN zypper --non-interactive ref \
 COPY sshd_config /etc/ssh/sshd_config
 
 RUN /usr/sbin/useradd -m -k /var/lib/empty user \
+  && chmod 700 /home/user \
 	&& mkdir /home/user/.ssh \
 	&& chown user: /home/user/.ssh \
 	&& chmod 0600 /home/user/.ssh
